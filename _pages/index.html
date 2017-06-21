@@ -1,0 +1,46 @@
+---
+
+layout: basic
+title: Overview
+class: overview
+nav-order: 1
+
+banner-title: the World is on Sale
+
+intro: >
+  <p class="p--lead">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Nulla vitae elit libero, a pharetra augue. Donec sed odio dui. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Nulla vitae elit libero, a pharetra augue. Donec sed odio dui.</p>
+
+image-divide: Nullam id dolor id nibh ultricies vehicula ut id elit
+
+---
+{% assign destinations = site.data.destinations %}
+
+
+
+{% for section in destinations %}
+
+  {% include destination-section.html %}
+
+  {% assign half = forloop.length | divided_by:2.0 | ceil %}
+  {% if forloop.index == half %}
+    <section class="section--padding-xxlarge bg--image-fixed align-center invert-text js-bg-fade" id="image-split" style="background-image: url('{{site.baseurl}}/img/content/overview/divide.jpg');">
+      <div class="row row--padding">
+        <span class="title title--larger title--light title--display">{{ page.image-divide }}</span>
+      </div>
+      <div class="js-bg-fade__overlay"></div>
+    </section>
+  {% endif %}
+
+{% endfor %}
+
+
+
+<section class="section--padding-large bg--partner-red invert-text align-center">
+  <div class="row row--padding">
+    <h2 class="title title--largest title--light title--display">The world is on sale!</h2>
+    <hr class="hr--center hr--margin">
+    <p class="p--lead">Donec id elit non mi porta gravida at eget metus. Maecenas faucibus mollis interdum. Maecenas sed diam eget risus varius blandit sit amet non magna. Nullam quis risus eget urna.</p>
+    <a href="{{ site.campaign-link }}" class="btn btn--invert btn--large">Discover now</a>
+  </div>
+</section>
+

@@ -1,0 +1,247 @@
+
+/* ===============================================
+ *     CUSTOM STYLES FOR THE SITE
+ * =============================================== */
+
+body { background-color: $white; }
+
+// -- Section styles --
+
+.invert-text {
+  color: $white;
+  &.title, & .title { color: $white; }
+  hr,.hr { background-color: rgba($white,0.4);}
+}
+.bg {
+  &--white      { background-color: $white; }
+  &--black      { background-color: $black; }
+  &--light-grey { background-color: $light-grey; }
+  &--grey { background-color: $grey; }
+  &--dark-grey  { background-color: $dark-grey; }
+  &--text-black     { background-color: $text-black; }
+  &--text-heading   { background-color: $text-heading; }
+  &--text-paragraph { background-color: $text-paragraph; }
+  &--se-orange     { background-color: $se-orange; }
+  &--se-light-grey { background-color: $se-light-grey; }
+  &--se-dark-grey  { background-color: $se-dark-grey; }
+  &--partner-primary   { background-color: $partner-primary; }
+  &--partner-secondary { background-color: $partner-secondary; }
+  &--partner-tertiary { background-color: $partner-tertiary; }
+  &--partner-red { background-color: $partner-red; }
+  &--partner-light-grey { background-color: $partner-light-grey; }
+
+  &--image { @include background-attributes(); }
+  &--image-fixed {
+    background-size: cover; background-attachment: fixed;
+    background-repeat: no-repeat; background-position: center;
+  }
+}
+
+// -- Page intro sections --
+.intro {
+  position: relative;
+  overflow: hidden;
+
+  &__content {}
+  &.has-nav &__content {
+    margin-top: 70px;
+    background-color: $partner-tertiary;
+    color: $white;
+    & .title { color: $white; }
+  }
+
+  &__expert {
+    margin: 1.5em 1em 0;
+    padding: 1.5em 0 0;
+    border-top: 1px solid rgba($white,0.25);
+    text-align: center;
+    @include bp(large){
+      padding: 1.5em 2em;
+      border-bottom: 1px solid rgba($white,0.25);
+      text-align: left;
+    }
+    @include bp(xlarge){
+      margin: 1.5em auto 0;
+    }
+
+    &:after {
+      content: "";
+      position: absolute;
+      z-index: 0;
+      top: -4px; left: 3px; bottom: -4px; right: 3px;
+      border-top: 3px solid rgba($black,0.25);
+      @include bp(large){
+        border-bottom: 3px solid rgba($black,0.25);
+      }
+    }
+
+    &-image {
+      display: none;
+      @include bp(large){
+        display: block;
+        position: absolute;
+        top: 50%; transform: translateY(-50%);
+        left: 0em;
+        width: 10em;
+        max-width: 30%;
+        z-index: $z-content-upper;
+        &:before { padding-top: 100%; }
+        .overview &:before { padding-top: 133.3333333%; }
+      }
+      @include bp(xxlarge){
+        left: -2em;
+      }
+    }
+    &-content {
+      margin-left: 0;
+      @include bp(large){
+        margin-left: 10em;
+      }
+      @include bp(xxlarge){
+        margin-left: 8em;
+      }
+
+      &:before {
+        content: '“ ';
+        position: absolute;
+        margin-left: -15px;
+        top: 10px;
+        z-index: 0;
+        font-size:6em;
+        font-family: Helvetica, sans-serif;
+        color: rgba($white,0.2);
+      }
+      .overview &:before { content: none; }
+    }
+  }
+
+  &__nav {
+    background-color: $partner-secondary;
+    color: #fff;
+    position: absolute;
+    top: 0; left: 0; width: 100%;
+    .list--horizontal {
+      height: 70px;
+      & li:hover {
+        background-color: rgba($black,0.1);
+        &:after { background-color: transparent; }
+      }
+      & a { line-height: 70px; }
+    }
+
+    &.stuck {
+      position: fixed; top: 0; bottom: auto;
+      z-index: $z-nav-upper;
+      box-shadow: 0 0 5px 0 rgba($black, 0.2);
+    }
+  }
+
+}
+
+/* ===============================================
+ *     JAVASCRIPT SECTIONS
+ * =============================================== */
+
+.accordion {
+  @include clearfix();
+  &__trigger {}
+  &--open {}
+  &--closed {}
+}
+
+.js-bg-fade {
+  position: relative;
+  & * { z-index: 1; }
+  &__overlay {
+    position: absolute;
+    top:0; left:0; bottom:0; right:0;
+    background-color: rgba($dark-grey,0.7);
+    opacity: 1;
+    z-index: 0;
+  }
+}
+
+
+/* ===============================================
+ *     DESTINATION SECTIONS
+ * =============================================== */
+
+#image-split {
+  display: none;
+  @include bp(large){ display: block; }
+}
+
+.destination {
+  &__title {
+    margin-bottom: 3em;
+    position: relative;
+    z-index: $z-content-upper;
+    @include bp(large){
+      margin-bottom: -2em;
+      text-shadow: 0 0 20px $partner-light-grey;
+    }
+  }
+
+  &__content {
+    padding-top: 1em;
+    position: relative;
+    z-index: $z-content-upper;
+  }
+
+
+  &__images {
+    margin-top: -2em;
+    position: relative;
+    &-small {
+      display: none;
+    }
+  }
+
+
+
+  @mixin image-grid( $col1, $col2, $has-gutters: null ) {
+    .destination__image {
+      @if $has-gutters {
+        @include span( $gutters $col1 );
+      } @else {
+        @include span( $col1 );
+      }
+    }
+    .destination__image:nth-child( even ) {
+      @if $has-gutters {
+        @include span( $gutters last $col2 );
+      } @else {
+         @include span( last $col2 );
+      }
+    }
+  }
+
+  @include bp(large){
+    &__images {
+      position: relative;
+      z-index: $z-content;
+      margin-top: -3em;
+      padding: 0 2.5em 0 1em;
+      &-small {
+        display: block;
+        margin-top: -3em;
+        margin-right: -4em;
+        & .bg-image--ratio-3-4 { display: none;}
+      }
+    }
+  }
+
+  @include bp(xxlarge){
+    &__images {
+      padding: 0 1.5em;
+      &-small {
+        margin-top: -1.5em;
+        margin-left: -3.5em;
+        margin-right: -3.5em;
+        @include image-grid( 5, 7, gutters );
+        & .bg-image--ratio-3-4 { display: block; margin-top: -2.5em; }
+      }
+    }
+  }
+
+}

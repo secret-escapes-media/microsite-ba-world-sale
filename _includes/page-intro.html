@@ -1,0 +1,22 @@
+
+{% assign destinations = site.data.destinations %}
+<div class="intro {% if destinations.size > 0 %}has-nav{% endif %}">
+
+  {% if destinations.size > 0 %}
+  <section class="intro__nav section--padding-none align-center">
+    <ul class="list--horizontal row row--padding">
+      {% for section in destinations %}
+      <li><a href="#{{ section.class }}" class="p--expanded p--upper p--small p--bold">{{ section.title }}</a></li>
+      {% endfor %}
+    </ul>
+  </section>
+  {% endif %}
+
+  <section class="intro__content">
+    <div class="row row--padding align-center">
+      {{ page.intro }}
+    </div>
+  </section>
+
+</div>
+

@@ -1,0 +1,94 @@
+
+
+  - title: California
+    class: california
+    content: >
+      <p class="p--lead">Sed posuere consectetur est at lobortis. Etiam porta sem malesuada magna mollis euismod.</p>
+      <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Nulla vitae elit libero, a pharetra augue.</p>
+    offers:
+      - title: Flights to California
+        content: Sed posuere consectetur est at lobortis.
+        price: 378
+        price-description: (return)
+        link: link
+      - title: California Fly-Drives
+        content: Sed posuere consectetur est at lobortis.
+        price: 429
+        price-description: per person
+        link: link
+
+
+
+  - title: Europe
+    class: europe
+    content: >
+      <p class="p--lead">Sed posuere consectetur est at lobortis. Etiam porta sem malesuada magna mollis euismod.</p>
+      <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Nulla vitae elit libero, a pharetra augue.</p>
+    offers:
+      - title: 7 night European Beach Holiday
+        content: Sed posuere consectetur est at lobortis.
+        price: 179
+        price-description: per person
+        link: link
+      - title: 2 night European City Break
+        content: Sed posuere consectetur est at lobortis.
+        price: 99
+        price-description: per person
+        link: link
+
+
+
+  - title: New York
+    class: new-york
+    content: >
+      <p class="p--lead">Sed posuere consectetur est at lobortis. Etiam porta sem malesuada magna mollis euismod.</p>
+      <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Nulla vitae elit libero, a pharetra augue.</p>
+    offers:
+      - title: Flights to New York
+        content: Selected dates 1 Sept 17 -26 May 18
+        price: 379
+        price-description: (return)
+        link: link
+
+
+
+  - title: Dubai
+    class: dubai
+    content: >
+      <p class="p--lead">Sed posuere consectetur est at lobortis. Etiam porta sem malesuada magna mollis euismod.</p>
+      <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Nulla vitae elit libero, a pharetra augue.</p>
+    offers:
+      - title: Flights to Dubai
+        content: Selected dates 20 Aug 17 - 23 Mar 18
+        price: 379
+        price-description: (return)
+        link: link
+
+
+
+  - title: Barbados
+    class: barbados
+    content: >
+      <p class="p--lead">Sed posuere consectetur est at lobortis. Etiam porta sem malesuada magna mollis euismod.</p>
+      <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Nulla vitae elit libero, a pharetra augue.</p>
+    offers:
+      - title: 7 night Barbados Holiday
+        content: Sed posuere consectetur est at lobortis. Etiam porta sem malesuada magna mollis euismod.
+        price: 499
+        price-description: per person
+        link: link
+
+
+
+  - title: Florida
+    class: florida
+    content: >
+      <p class="p--lead">Sed posuere consectetur est at lobortis. Etiam porta sem malesuada magna mollis euismod.</p>
+      <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Nulla vitae elit libero, a pharetra augue.</p>
+    offers:
+      - title: Florida Holiday
+        content: Sed posuere consectetur est at lobortis. Etiam porta sem malesuada magna mollis euismod.
+        price: 499
+        price-description: per person
+        link: link
+

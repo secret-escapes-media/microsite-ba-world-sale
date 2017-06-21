@@ -1,0 +1,97 @@
+.card {
+  @include transition();
+  display: block;
+  border-radius: 5px;
+  overflow: hidden;
+  background-color: $white;
+  box-shadow: 0 0 0px 1px rgba(0,0,0,0.1);
+  &:hover { box-shadow: 0 0 10px 1px rgba(0,0,0,0.1); }
+
+  &:first-child { margin-top: 2em; }
+  &:not(:last-child){ margin-bottom: 1em; }
+  @include bp(large){
+    &:not(:last-child){ margin-bottom: 2em; }
+  }
+
+  &__image { }
+  &__title {
+    padding: 0.66em 1em;
+    .card--small & { padding: 0.66em; }
+    @include bp(large){
+      padding: 1em 1.5em;
+      .card--small & { padding: 1em; }
+    }
+  }
+  &__content {
+    padding: 0.66em 1em;
+    border-top: 1px solid $light-grey;
+    .card--small & { padding: 0.66em; }
+    @include bp(large){
+      padding: 1em 1.5em;
+      .card--small & { padding: 1em; }
+    }
+  }
+
+  &__location {
+    font-size: 0.85em;
+    line-height: 1.5;
+    text-indent: -0.1em;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    font-weight: 600;
+    margin-top: 0.5em;
+    .card--small & { margin-top: 0.25em; }
+    &:before {
+      content: "";
+      display: inline-block;
+      height: 1.1em;
+      width: 1em;
+      margin-right: .5em;
+      margin-bottom: .2em;
+      vertical-align: middle;
+      background-image: url( "../img/icons/map-pin.png" );
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: 100%;
+      background-size: contain;
+      .svg & { background-image: url( "../img/icons/map-pin.svg" ); }
+    }
+  }
+
+  &__link {
+    @include transition();
+    position: absolute;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    width: 4em;
+    text-align: center;
+    align-items: center;
+    display: flex;
+    background-color: $partner-tertiary;
+    @include bp(large){
+      background-color: rgba($partner-tertiary,0.3);
+    }
+    & img { margin: auto; }
+  }
+  &:hover {
+    .card__link {
+      background-color: $partner-tertiary;
+    }
+  }
+
+  // SMALL VARIANT
+  &--small {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    .card__image { width: 33.333%; float: left; }
+    .card__content { width: 66.667%; text-align: left; }
+  }
+
+  &--link {
+    position: relative;
+    .card__title { margin-right: 4em; }
+    .card__content { margin-right: 4em; }
+  }
+}
