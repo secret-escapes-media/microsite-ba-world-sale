@@ -13,8 +13,16 @@
   {% endif %}
 
   <section class="intro__content">
-    <div class="row row--padding align-center">
-      {{ page.intro }}
+    <div class="row row--padding row--columns-3-9-gutters row--columns-vertical-align">
+
+      <div class="row__column">
+        <img src="{{site.baseurl}}/img/content/sale-globe.png" alt="">
+      </div>
+
+      <div class="row__column">
+        {{ page.intro }}
+      </div>
+
     </div>
   </section>
 
