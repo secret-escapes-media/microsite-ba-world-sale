@@ -1,8 +1,8 @@
 # Site settings
 title: The World is on Sale
 description: >
-  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eligendi veniam voluptatibus totam accusantium laborum quo dolore.
-baseurl: "/ba-world-sale" # the subpath of your site, e.g. /blog/
+  British Airways are holding a sale that will see you jet-setting around the world in no time. Take advantage of these incredible discounted flights to some of the world’s most exclusive travel destinations.
+baseurl: "/britishairwaysworldsale" # the subpath of your site, e.g. /blog/
 url: "http://mp.secretescapes.com" # the base hostname & protocol for your site
 
 # Build settings

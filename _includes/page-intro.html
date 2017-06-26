@@ -3,13 +3,14 @@
 <div class="intro {% if destinations.size > 0 %}has-nav{% endif %}">
 
   {% if destinations.size > 0 %}
-  <section class="intro__nav section--padding-none align-center">
-    <ul class="list--horizontal row row--padding">
-      {% for section in destinations %}
-      <li><a href="#{{ section.class }}" class="p--expanded p--upper p--small p--bold">{{ section.title }}</a></li>
-      {% endfor %}
-    </ul>
-  </section>
+  <!-- SITE NAV -->
+  <section class="intro__nav section--padding-none align-center site-nav">
+    <div class="row row--padding">
+      <ul class="site-nav__list">
+        {% for section in destinations %}<li class="site-nav__item site-nav__item--{{ section.title | slugify }}{% if section.class == page.class %} is-current{% endif %}"><a class="site-nav__link" href="{{ site.baseurl }}/#{{section.class}}">{{section.title}}</a></li>{% endfor %}
+      </ul>
+    </div><!-- END - .row -->
+  </section><!-- END - .site-nav -->
   {% endif %}
 
   <section class="intro__content">
