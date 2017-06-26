@@ -10,7 +10,7 @@ body { background-color: $white; }
 .invert-text {
   color: $white;
   &.title, & .title { color: $white; }
-  hr,.hr { background-color: rgba($white,0.4);}
+  hr,.hr { background-color: rgba($white,0.2);}
 }
 .bg {
   &--white      { background-color: $white; }

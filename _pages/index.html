@@ -1,6 +1,6 @@
 ---
 
-layout: basic
+layout: default
 title: Overview
 class: overview
 nav-order: 1
@@ -8,10 +8,13 @@ nav-order: 1
 banner-title: the World is on Sale
 
 intro: >
-  <h3 class="title title--upper title--expanded title--tiny">So where will it be?</h3>
-  <p class="p--lead">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Nulla vitae elit libero, a pharetra augue. Donec sed odio dui. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Nulla vitae elit libero, a pharetra augue. Donec sed odio dui.</p>
+  <h3 class="title title--upper title--expanded title--tiny">Where to?</h3>
+  <p class="p--lead">British Airways are holding a sale that will see you jet-setting around the world in no time. Take advantage of these incredible discounted flights to some of the world’s most exclusive travel destinations, with a carrier that ensures only the most comfortable travel. Send your wanderlust reeling by browsing through the British Airways collection below...</p>
 
-image-divide: Nullam id dolor id nibh ultricies vehicula ut id elit
+image-divide: >
+  <h3 class="title title--largest title--display">The United States</h3>
+  <p class="p--lead">A land of hopes and dreams, more iconic sights than you can shake some salt-water taffy at, and a cultural melting pot so diverse that an endless stream of treats await to be discovered – the USA is a familiar yet oft surprising destination. </p>
+  <p class="p--lead">From the verdant, old-world charms of the northeast pierced by iconic urban scenes, to the spiced rhythms of the hot and sticky deep south, this vast expanse offers more than a lifetime of intrepid discovery. You may think you know the USA. You may be surprised... </p>
 
 ---
 {% assign destinations = site.data.destinations %}
@@ -26,7 +29,7 @@ image-divide: Nullam id dolor id nibh ultricies vehicula ut id elit
   {% if forloop.index == half %}
     <section class="section--padding-xxlarge bg--image-fixed align-center invert-text js-bg-fade" id="image-split" style="background-image: url('{{site.baseurl}}/img/content/overview/divide.jpg');">
       <div class="row row--padding">
-        <span class="title title--larger title--light title--display">{{ page.image-divide }}</span>
+        {{ page.image-divide }}
       </div>
       <div class="js-bg-fade__overlay"></div>
     </section>
@@ -40,8 +43,8 @@ image-divide: Nullam id dolor id nibh ultricies vehicula ut id elit
   <div class="row row--padding">
     <h2 class="title title--largest title--light title--display">The world is on sale!</h2>
     <hr class="hr--center hr--margin">
-    <p class="p--lead">Donec id elit non mi porta gravida at eget metus. Maecenas faucibus mollis interdum. Maecenas sed diam eget risus varius blandit sit amet non magna. Nullam quis risus eget urna.</p>
-    <a href="{{ site.campaign-link }}" class="btn btn--invert btn--large">Discover now</a>
+    <p class="p--lead">Tempted yet? Check out these offers and more on the British Airways page, with a variety of flight only and holiday deals to inspire your summer…</p>
+    <a href="{{ site.campaign-link }}" class="btn btn--invert btn--large" id="tracking-footer-btn">Discover more</a>
   </div>
 </section>
 

@@ -22,12 +22,12 @@
       {{ section.content }}
 
       {% for offer in section.offers %}
-      <a href="{{ offer.link }}" class="card card--link">
+      <a href="{{ site.campaign-link }}" class="card card--link" id="tracking-offer-{{ offer.title | slugify }}">
         <div class="card__title">
           <h2 class="title title--micro">{{ offer.title }}</h2>
         </div>
         <div class="card__content">
-          <p class="title">From <span class="title--bold title--color">£{{ offer.price }}</span> {{ offer.price-description }}</p>
+          <p class="title title--upper">From <span class="title--bold title--color">£{{ offer.price }}</span> {{ offer.price-description }}*</p>
           <p>{{ offer.content }}</p>
         </div>
         <div class="card__link">
