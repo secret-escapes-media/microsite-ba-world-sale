@@ -9,4 +9,4 @@ url: "http://mp.secretescapes.com" # the base hostname & protocol for your site
 markdown: kramdown
 exclude: [node_modules, gulpfile.js, package.json, bower_components, bower.json, README.md, npm-debug.log]
 
-campaign-link: https://ad.doubleclick.net/ddm/clk/281431668;200931621;y?http://www.britishairways.com/en-gb/offers/sale?DM1_Channel=TS&DM1_Campaign=UKI_GB_EN_Secretescapes_JulySale17email&DM1_Site=Secretescapes&utm_source=Secretescapes&utm_medium=Partners&utm_campaign=UKI_GB_EN_Secretescapes_JulySale17email&utm_term=SR
+campaign-link: https://ad.doubleclick.net/ddm/clk/281431668;200931936;h?http://www.britishairways.com/en-gb/offers/sale?DM1_Channel=TS&DM1_Campaign=UKI_GB_EN_Secretescapes_JulySale17landingpage&DM1_Site=Secretescapes&utm_source=Secretescapes&utm_medium=Partners&utm_campaign=UKI_GB_EN_Secretescapes_JulySale17landingpage&utm_term=SR
